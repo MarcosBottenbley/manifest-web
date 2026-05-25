@@ -19,7 +19,7 @@ export default function QRScanner() {
     readerRef.current = reader;
 
     reader
-      .decodeFromVideoDevice(undefined, videoRef.current!, (result, err) => {
+      .decodeFromVideoDevice(null, videoRef.current!, (result, err) => {
         if (result) {
           const text = result.getText().trim();
           if (UUID_RE.test(text)) {

@@ -146,7 +146,7 @@ export default function ItemForm() {
     readerRef.current = new BrowserMultiFormatReader();
     try {
       await readerRef.current.decodeFromVideoDevice(
-        undefined,
+        null,
         videoRef.current!,
         async (result, err) => {
           if (result) {
